@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EUJ-se-ubs">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CarCollector" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AH2-Oz-6J2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FOf-xf-DHv">
+                            <connections>
+                                <segue destination="7w3-l4-sXW" kind="show" id="Kd9-gK-N9U"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="619.5" y="347"/>
+        </scene>
+        <!--Car View Controller-->
+        <scene sceneID="Quh-2j-oHa">
+            <objects>
+                <viewController id="7w3-l4-sXW" customClass="CarViewController" customModule="CarCollector" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FyI-7B-tN4"/>
+                        <viewControllerLayoutGuide type="bottom" id="1jD-8H-ZoM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nFt-re-ZF6">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ford_capri.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bjk-Ja-Vp3">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ARX-wJ-pCK"/>
+                                    <constraint firstAttribute="height" constant="125" id="qHm-iF-Bxn"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ARX-wJ-pCK"/>
+                                        <exclude reference="qHm-iF-Bxn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ARX-wJ-pCK"/>
+                                        <include reference="qHm-iF-Bxn"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pc7-zE-mE9">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxs-XH-0fl">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="7w3-l4-sXW" eventType="touchUpInside" id="3NZ-wT-4La"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qxs-XH-0fl" firstAttribute="centerX" secondItem="nFt-re-ZF6" secondAttribute="centerX" id="1ea-1g-uBD"/>
+                            <constraint firstItem="pc7-zE-mE9" firstAttribute="width" secondItem="bjk-Ja-Vp3" secondAttribute="width" id="5DY-7V-ubB"/>
+                            <constraint firstItem="pc7-zE-mE9" firstAttribute="centerX" secondItem="nFt-re-ZF6" secondAttribute="centerX" id="Jr8-Dp-wgE"/>
+                            <constraint firstItem="pc7-zE-mE9" firstAttribute="top" secondItem="bjk-Ja-Vp3" secondAttribute="bottom" constant="30" id="MIi-BI-Xff"/>
+                            <constraint firstItem="Qxs-XH-0fl" firstAttribute="top" secondItem="pc7-zE-mE9" secondAttribute="bottom" constant="20" id="O7Z-C0-RTO"/>
+                            <constraint firstItem="bjk-Ja-Vp3" firstAttribute="centerX" secondItem="nFt-re-ZF6" secondAttribute="centerX" id="SXP-c6-iFQ"/>
+                            <constraint firstItem="bjk-Ja-Vp3" firstAttribute="top" secondItem="FyI-7B-tN4" secondAttribute="bottom" constant="25" id="TCU-ub-C6E"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="bjk-Ja-Vp3"/>
+                                <exclude reference="pc7-zE-mE9"/>
+                                <exclude reference="Qxs-XH-0fl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="SXP-c6-iFQ"/>
+                                <exclude reference="TCU-ub-C6E"/>
+                                <exclude reference="5DY-7V-ubB"/>
+                                <exclude reference="Jr8-Dp-wgE"/>
+                                <exclude reference="MIi-BI-Xff"/>
+                                <exclude reference="1ea-1g-uBD"/>
+                                <exclude reference="O7Z-C0-RTO"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="bjk-Ja-Vp3"/>
+                                <include reference="pc7-zE-mE9"/>
+                                <include reference="Qxs-XH-0fl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="SXP-c6-iFQ"/>
+                                <include reference="TCU-ub-C6E"/>
+                                <include reference="5DY-7V-ubB"/>
+                                <include reference="Jr8-Dp-wgE"/>
+                                <include reference="MIi-BI-Xff"/>
+                                <include reference="1ea-1g-uBD"/>
+                                <include reference="O7Z-C0-RTO"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="ztl-Y4-ATs">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="B0p-s8-aq6">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="7w3-l4-sXW" id="prJ-u0-ghd"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="nrr-H5-8bi">
+                                <connections>
+                                    <action selector="photosTapped:" destination="7w3-l4-sXW" id="K6x-bm-BYl"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="carImageView" destination="bjk-Ja-Vp3" id="008-d2-19b"/>
+                        <outlet property="titleTextField" destination="pc7-zE-mE9" id="ibF-PC-aZT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kjL-kO-cOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1390.5" y="348"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="slm-Ns-6Wd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EUJ-se-ubs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IRb-yV-LaU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Hfw-Am-pjr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kXa-IN-Xhl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-202.5" y="347"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ford_capri.jpg" width="570" height="428"/>
+    </resources>
+</document>
